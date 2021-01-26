@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>short URL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-dark bg-dark shadow p-3 mb-5">
+ 	<a class="navbar-brand" href="#">
+        <b>URL Reducer</b>
+  	</a>
+	</nav>
+ 
+  <div class="container">
+  <div class="display-4 jumbotron shadow p-5 mb-5 bg-white rounded">
+  	<center>
+  	<h1><b>Your short url is generated</b></h1>
+  	<hr>
+    <p class="lead" th:text="'URL: ' + ${redirectEntity.url}" />
+    <p class="lead" th:text="'Short URL: http://localhost:8080/' + ${redirectEntity.alias}" />
+    <a class="lead btn btn-primary" th:href="@{'http://localhost:8080/'+${redirectEntity.alias}}">Click here to open</a><br>
+    <a class="lead btn btn-primary"  href="/">Generate new Link</a>
+  	</center>
+  	</div>
+  
+	</div>      
+  </body>
+
+</html>

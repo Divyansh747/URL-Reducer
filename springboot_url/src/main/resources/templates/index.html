@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>short URL</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-dark bg-dark shadow p-3 mb-5">
+ 	<a class="navbar-brand" href="#">
+        <b>URL Reducer</b>
+  	</a>
+	</nav>
+ 
+ <div class="container">
+  <div class="display-4 jumbotron shadow p-5 mb-5 bg-white rounded">
+  	<center>
+  	<h1><b>Welcome to URL Reducer</b></h1>
+  	<hr>
+    <form action="#" th:action="@{/}" th:object="${short}" method="post">
+    <div class="form-group">
+    	<p class="lead">Alias: <input type="text" th:field="*{alias}" /></p>
+        <p class="lead">URL: <input type="text" th:field="*{url}" /></p>
+        <p class="lead"><input type="submit" class="btn btn-primary" value="Submit" /> <input type="reset" class="btn btn-primary" value="Reset" /></p>
+    </div>
+    </form>
+  	</center>
+  	</div>
+  
+	</div>  
+ 
+	
+	
+	</body>
+
+</html>
